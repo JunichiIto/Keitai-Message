@@ -1,10 +1,6 @@
-require './spec_helper'
-require './keitai.rb'
-
+require 'spec_helper'
 
 describe Keitai do
-
-
   before do
     @input1 = "5"
     @input2 = "20"
