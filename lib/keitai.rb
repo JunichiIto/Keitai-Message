@@ -25,7 +25,7 @@ class Keitai
   def decipher
     # Convert strings to letter
     if @input
-      main_arr = @input.split('0').map do |item| 
+      main_arr = @input.split('0').map do |item|
         number = item[0].to_i
         item_length = item.length
         letter_length = @letters[number].length
