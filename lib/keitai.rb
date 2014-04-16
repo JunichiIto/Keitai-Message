@@ -2,7 +2,6 @@
 # @param input [String]
 # @return [String] converted letters
 class Keitai
-
   ##
   # allocate letters to array using array key
   def initialize(input)
@@ -26,8 +25,8 @@ class Keitai
     @input
   end
 
-  ## 
-  #Convert strings to letter
+  ##
+  # Convert strings to letter
   def decipher
     if @input
       main_arr = @input.split('0').map do |item|
