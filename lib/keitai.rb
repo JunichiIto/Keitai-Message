@@ -1,4 +1,7 @@
 class Keitai
+  # Convert numbers to letters
+  # @param input [String]
+  # @return [String] converted letters
 
   def initialize(input)
     @letters = []
@@ -12,7 +15,7 @@ class Keitai
     @letters[8] = "tuv"
     @letters[9] = "wxyz"
     @letters[0] = ""
-    if input.include?("0") 
+    if input.include?("0")
       @input = input.gsub(/^0+/,"")
     end
   end
@@ -22,6 +25,7 @@ class Keitai
   end
 
   def decipher
+    # Convert strings to letter
     if @input
       main_arr = @input.split("0").map do |item| 
         number = item[0].to_i
