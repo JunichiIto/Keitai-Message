@@ -9,10 +9,6 @@ class Keitai
     @input = input
   end
 
-  def normalized_input
-    @input.include?('0') ? @input.gsub(/^0+/, '') : ''
-  end
-
   ##
   # Convert strings to letter
   def decipher
@@ -27,5 +23,11 @@ class Keitai
     letter_index = item[0].to_i - 1
     position = item.length % @letters[letter_index].length - 1
     @letters[letter_index][position]
+  end
+
+  private
+
+  def normalized_input
+    @input.include?('0') ? @input : ''
   end
 end
