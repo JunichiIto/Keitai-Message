@@ -24,17 +24,14 @@ class Keitai
   ##
   # Convert strings to letter
   def decipher
-    if input
-      main_arr = input.split('0').map do |item|
-        number = item[0].to_i
-        item_length = item.length
-        letter_length = @letters[number].length
-        if item_length > 0 and /^(\d)\1*$/.match(item)
-          position = item_length % letter_length
-          @letters[number][position - 1]
-        end
+    input.split('0').map {|item|
+      number = item[0].to_i
+      item_length = item.length
+      letter_length = @letters[number].length
+      if item_length > 0 and /^(\d)\1*$/.match(item)
+        position = item_length % letter_length
+        @letters[number][position - 1]
       end
-    end
-    main_arr.join
+    }.join
   end
 end
