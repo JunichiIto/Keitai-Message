@@ -5,7 +5,7 @@ class Keitai
   ##
   # allocate letters to array using array key
   def initialize(input)
-    @letters = ['', '.,!? ', 'abc', 'def', 'ghi', 'jkl', 'mno', 'pqrs', 'tuv', 'wxyz']
+    @letters = ['.,!? ', 'abc', 'def', 'ghi', 'jkl', 'mno', 'pqrs', 'tuv', 'wxyz']
     @input = input
   end
 
@@ -22,8 +22,8 @@ class Keitai
   def covert_to_letter(item)
     return '' if item.empty?
 
-    number = item[0].to_i
-    position = item.length % @letters[number].length
-    @letters[number][position - 1]
+    letter_index = item[0].to_i - 1
+    position = item.length % @letters[letter_index].length
+    @letters[letter_index][position - 1]
   end
 end
