@@ -4,9 +4,9 @@
 class Keitai
   ##
   # allocate letters to array using array key
-  def initialize(arg_input)
+  def initialize(input)
     @letters = ['', '.,!? ', 'abc', 'def', 'ghi', 'jkl', 'mno', 'pqrs', 'tuv', 'wxyz']
-    @input = arg_input
+    @input = input
   end
 
   def normalized_input
