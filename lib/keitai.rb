@@ -19,6 +19,8 @@ class Keitai
       .join
   end
 
+  private
+
   def covert_to_letter(item)
     letter_index = item[0].to_i - 1
     position = item.length % @letters[letter_index].length - 1
