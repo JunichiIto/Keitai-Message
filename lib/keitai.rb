@@ -18,13 +18,18 @@ class Keitai
     @letters[8] = 'tuv'
     @letters[9] = 'wxyz'
     @letters[0] = ''
-    @input = arg_input.gsub(/^0+/, '') if arg_input.include?('0')
+    @input = arg_input
+  end
+
+  def normalized_input
+    return nil unless input.include?('0')
+    input.gsub(/^0+/, '')
   end
 
   ##
   # Convert strings to letter
   def decipher
-    input.split('0').map {|item|
+    normalized_input.split('0').map {|item|
       number = item[0].to_i
       item_length = item.length
       letter_length = @letters[number].length
