@@ -16,12 +16,12 @@ class Keitai
   ##
   # Convert strings to letter
   def decipher
-    normalized_input.split('0').map {|item|
-      covert_to_letter(item) if item.length > 0
-    }.join
+    normalized_input.split('0').map{|item| covert_to_letter(item) }.join
   end
 
   def covert_to_letter(item)
+    return '' if item.empty?
+
     number = item[0].to_i
     item_length = item.length
     letter_length = @letters[number].length
