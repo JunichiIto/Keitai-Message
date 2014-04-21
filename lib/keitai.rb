@@ -5,17 +5,7 @@ class Keitai
   ##
   # allocate letters to array using array key
   def initialize(arg_input)
-    @letters = []
-    @letters[1] = '.,!? '
-    @letters[2] = 'abc'
-    @letters[3] = 'def'
-    @letters[4] = 'ghi'
-    @letters[5] = 'jkl'
-    @letters[6] = 'mno'
-    @letters[7] = 'pqrs'
-    @letters[8] = 'tuv'
-    @letters[9] = 'wxyz'
-    @letters[0] = ''
+    @letters = ['', '.,!? ', 'abc', 'def', 'ghi', 'jkl', 'mno', 'pqrs', 'tuv', 'wxyz']
     @input = arg_input
   end
 
