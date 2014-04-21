@@ -23,8 +23,7 @@ class Keitai
     return '' if item.empty?
 
     number = item[0].to_i
-    letter_length = @letters[number].length
-    position = item.length % letter_length
+    position = item.length % @letters[number].length
     @letters[number][position - 1]
   end
 end
