@@ -19,13 +19,14 @@ describe Keitai do
 
   end
 
-  specify { expect(@keitai1.normalized_input). to eq nil }
+  specify { expect(@keitai1.normalized_input). to eq '' }
   specify { expect(@keitai2.normalized_input). to eq '20' }
   specify { expect(@keitai3.normalized_input). to eq '220' }
   specify { expect(@keitai4.normalized_input). to eq '222220' }
   specify { expect(@keitai5.normalized_input). to eq  '44033055505550666011011111090666077705550301110' }
   specify { expect(@keitai6.normalized_input). to eq '555555550000330000444000080000200004440000' }
 
+  specify { expect(@keitai1.decipher). to eq '' }
   specify { expect(@keitai2.decipher). to eq 'a' }
   specify { expect(@keitai3.decipher). to eq 'b' }
   specify { expect(@keitai4.decipher). to eq 'b' }

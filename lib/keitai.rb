@@ -20,7 +20,7 @@ class Keitai
   end
 
   def normalized_input
-    @input.include?('0') ? @input.gsub(/^0+/, '') : nil
+    @input.include?('0') ? @input.gsub(/^0+/, '') : ''
   end
 
   ##
