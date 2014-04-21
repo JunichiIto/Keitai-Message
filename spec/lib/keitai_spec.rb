@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Keitai do
-  subject { Keitai.new(input).decipher }
+  subject { Keitai.decipher(input) }
 
   context 'without 0' do
     let(:input) { '5' }

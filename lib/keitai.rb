@@ -2,11 +2,16 @@
 # @param input [String]
 # @return [String] converted letters
 class Keitai
+  LETTERS = ['.,!? ', 'abc', 'def', 'ghi', 'jkl', 'mno', 'pqrs', 'tuv', 'wxyz'].freeze
+
   ##
   # allocate letters to array using array key
   def initialize(input)
-    @letters = ['.,!? ', 'abc', 'def', 'ghi', 'jkl', 'mno', 'pqrs', 'tuv', 'wxyz']
     @input = input
+  end
+
+  def self.decipher(input)
+    self.new(input).decipher
   end
 
   ##
@@ -23,7 +28,7 @@ class Keitai
 
   def covert_to_letter(item)
     letter_index = item[0].to_i - 1
-    position = item.length % @letters[letter_index].length - 1
-    @letters[letter_index][position]
+    position = item.length % LETTERS[letter_index].length - 1
+    LETTERS[letter_index][position]
   end
 end
