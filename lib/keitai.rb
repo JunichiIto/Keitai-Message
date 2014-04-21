@@ -20,7 +20,7 @@ class Keitai
       number = item[0].to_i
       item_length = item.length
       letter_length = @letters[number].length
-      if item_length > 0 and /^(\d)\1*$/.match(item)
+      if item_length > 0
         position = item_length % letter_length
         @letters[number][position - 1]
       end
