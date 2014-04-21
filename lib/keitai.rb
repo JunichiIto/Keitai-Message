@@ -23,7 +23,7 @@ class Keitai
     return '' if item.empty?
 
     letter_index = item[0].to_i - 1
-    position = item.length % @letters[letter_index].length
-    @letters[letter_index][position - 1]
+    position = item.length % @letters[letter_index].length - 1
+    @letters[letter_index][position]
   end
 end
