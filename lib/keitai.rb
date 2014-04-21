@@ -8,13 +8,13 @@ class Keitai
     input
       .scan(/([1-9]+)0/)
       .flatten
-      .map{|item| covert_to_letter(item) }
+      .map{|number_string| covert_to_letter(number_string) }
       .join
   end
 
-  def self.covert_to_letter(item)
-    letter_index = item[0].to_i - 1
-    position = item.length % LETTERS[letter_index].length - 1
+  def self.covert_to_letter(number_string)
+    letter_index = number_string[0].to_i - 1
+    position = number_string.length % LETTERS[letter_index].length - 1
     LETTERS[letter_index][position]
   end
 end
