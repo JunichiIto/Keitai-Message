@@ -17,10 +17,10 @@ class Keitai
   # Convert strings to letter
   def decipher
     normalized_input.split('0').map {|item|
-      number = item[0].to_i
-      item_length = item.length
-      letter_length = @letters[number].length
-      if item_length > 0
+      if item.length > 0
+        number = item[0].to_i
+        item_length = item.length
+        letter_length = @letters[number].length
         position = item_length % letter_length
         @letters[number][position - 1]
       end
