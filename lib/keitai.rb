@@ -12,9 +12,9 @@ class Keitai
   ##
   # Convert strings to letter
   def decipher
-    normalized_input
-      .split('0')
-      .reject(&:empty?)
+    @input
+      .scan(/([1-9]+)0/)
+      .flatten
       .map{|item| covert_to_letter(item) }
       .join
   end
@@ -23,11 +23,5 @@ class Keitai
     letter_index = item[0].to_i - 1
     position = item.length % @letters[letter_index].length - 1
     @letters[letter_index][position]
-  end
-
-  private
-
-  def normalized_input
-    @input.include?('0') ? @input : ''
   end
 end
