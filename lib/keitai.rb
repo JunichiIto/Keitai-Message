@@ -2,8 +2,6 @@
 # @param input [String]
 # @return [String] converted letters
 class Keitai
-  attr_reader :input
-
   ##
   # allocate letters to array using array key
   def initialize(arg_input)
@@ -22,8 +20,8 @@ class Keitai
   end
 
   def normalized_input
-    return nil unless input.include?('0')
-    input.gsub(/^0+/, '')
+    return nil unless @input.include?('0')
+    @input.gsub(/^0+/, '')
   end
 
   ##
