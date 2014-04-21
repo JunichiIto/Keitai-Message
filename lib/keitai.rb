@@ -6,7 +6,7 @@ class Keitai
 
   ##
   # allocate letters to array using array key
-  def initialize(input)
+  def initialize(arg_input)
     @letters = []
     @letters[1] = '.,!? '
     @letters[2] = 'abc'
@@ -18,7 +18,7 @@ class Keitai
     @letters[8] = 'tuv'
     @letters[9] = 'wxyz'
     @letters[0] = ''
-    @input = input.gsub(/^0+/, '') if input.include?('0')
+    @input = arg_input.gsub(/^0+/, '') if arg_input.include?('0')
   end
 
   ##
