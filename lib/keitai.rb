@@ -6,8 +6,7 @@ class Keitai
 
   def self.decipher(input)
     input
-      .scan(/([1-9]+)0/)
-      .flatten
+      .scan(/[1-9]+(?=0)/)
       .map{|number_string| covert_to_letter(number_string) }
       .join
   end
