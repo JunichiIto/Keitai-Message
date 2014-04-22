@@ -2,7 +2,7 @@
 # @param input [String]
 # @return [String] converted letters
 class Keitai
-  LETTERS = ['.,!? ', 'abc', 'def', 'ghi', 'jkl', 'mno', 'pqrs', 'tuv', 'wxyz'].freeze
+  LETTERS = %w(.,!?\  abc def ghi jkl mno pqrs tuv wxyz).freeze
 
   def self.decipher(input)
     input
